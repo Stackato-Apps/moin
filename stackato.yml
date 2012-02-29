@@ -10,11 +10,13 @@ requirements:
   pypm: [moin]
 
 services:
-  filesystem: data
+  filesystem: fs-moin
 
-# TODO: the `cp` should be run only once, else updated/added wiki
-# pages will be overwritten by the template
+
+env:
+  MOIN_SECRET: s3cr3tk3y
+
 hooks:
   pre-running:
     - ln -s $STACKATO_FILESYSTEM wiki
-    - cp -r $PYTHONUSERBASE/share/moin/* wiki/
+    - cp -rn $PYTHONUSERBASE/share/moin/* wiki/
