@@ -10,8 +10,7 @@ requirements:
   pypm: [moin]
 
 services:
-  filesystem: fs-moin
-
+  fs-moin: filesystem
 
 env:
   MOIN_SECRET: s3cr3tk3y
