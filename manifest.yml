@@ -1,7 +1,5 @@
 applications:
 - name: moin
-  framework:
-    name: python
   services:
     ${name}-fs:
       type: filesystem
@@ -12,8 +10,3 @@ applications:
       pre-running:
       - ln -s $STACKATO_FILESYSTEM wiki
       - cp -rn $PYTHONUSERBASE/share/moin/* wiki/
-    processes:
-      web: moin server standalone --hostname=0.0.0.0 --port=$PORT
-    requirements:
-      pypm:
-      - moin
