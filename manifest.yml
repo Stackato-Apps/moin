@@ -1,5 +1,6 @@
 applications:
 - name: moin
+  mem: 64M
   services:
     ${name}-fs:
       type: filesystem
