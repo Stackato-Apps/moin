@@ -17,7 +17,7 @@ to automate these backups, without needing to use the Stackato client.
 
 ## Deploying to Stackato
 
-You should set your $MOIN_SECRET key in stackato.yml and then push to stackato:
+You should set your $MOIN_SECRET key in manifest.yml and then push to stackato:
 
   `stackato push -n`
 
